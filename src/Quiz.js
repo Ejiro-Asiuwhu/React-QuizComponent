@@ -12,10 +12,10 @@ class Quiz extends Component {
     }
 
     render() {
-        console.log(quizData.quiz_questions.map(q => q.instruction_text));
+        console.log(quizData.quiz_questions[0].instruction_text);
         return (
             <div className="QuizQuestion">
-              <p>{quizData.quiz_questions.map(q => q.instruction_text)}</p>   
+              <p>{quizData.quiz_questions[0].instruction_text}</p>   
             </div>
         )
     }
