@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-let quizData = require('./quize_data.json');
+let quizData = require('./quiz_data.json');
 
 class Quiz extends Component {
     constructor(props) {
@@ -12,11 +12,10 @@ class Quiz extends Component {
     }
 
     render() {
+        console.log(quizData.quiz_questions.map(q => q.instruction_text));
         return (
-            <div>
-                <div className="QuizQuestion">
-                    {quizData.map(qData => (<p>qData.instruction_text</p>)) }
-                </div>
+            <div className="QuizQuestion">
+              <p>{quizData.quiz_questions.map(q => q.instruction_text)}</p>   
             </div>
         )
     }
